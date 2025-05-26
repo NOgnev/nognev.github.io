@@ -40,7 +40,7 @@ export const Header = () => {
               as={RouterLink}
               to={item.path}
               fontWeight={location.pathname === item.path ? 'bold' : 'normal'}
-              _hover={{ textDecoration: 'underline' }}
+              _hover={{ textDecoration: 'none' }}
             >
               {item.label}
             </Link>
