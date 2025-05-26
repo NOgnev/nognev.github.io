@@ -1,98 +1,44 @@
 <svg width="480" height="480" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
     <defs>
-        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#3a0ca3" />
-            <stop offset="100%" stop-color="#4361ee" />
-        </linearGradient>
+        <radialGradient id="bgGrad" cx="240" cy="240" r="240" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#726bff"/>
+            <stop offset="100%" stop-color="#22055e"/>
+        </radialGradient>
+
+        <mask id="mask">
+            <rect width="100%" height="100%" fill="black" />
+            <path
+                    d="
+          M240 60 L390 150
+          M240 60 L390 330
+          M240 60 L240 420
+          M240 60 L90 330
+          M240 60 L90 150
+
+          M390 150 L390 330
+          M390 150 L240 420
+          M390 150 L90 330
+          M390 150 L90 150
+
+          M390 330 L240 420
+          M390 330 L90 330
+          M390 330 L90 150
+
+          M240 420 L90 330
+          M240 420 L90 150
+
+          M90 330 L90 150
+        "
+                    stroke="white"
+                    stroke-width="16"
+                    fill="none"
+                    stroke-linecap="round"
+            />
+        </mask>
     </defs>
 
-    <!-- Подложка -->
-    <circle cx="240" cy="240" r="240" fill="url(#grad1)" opacity="0.9" />
-
-    <!-- Координаты 10 вершин правильного 10-угольника -->
-    <!-- Центр (240,240), радиус 180 -->
-    <polygon
-            points="
-      240,60
-      353.14,95.1
-      420.42,187.06
-      420.42,292.94
-      353.14,384.9
-      240,420
-      126.86,384.9
-      59.58,292.94
-      59.58,187.06
-      126.86,95.1
-    "
-            fill="rgba(255, 255, 255, 0.12)"
-            stroke="#edf2f7"
-            stroke-width="3"
-    />
-
-    <!-- Вершины -->
-    <circle cx="240" cy="60" r="6" fill="#edf2f7" />
-    <circle cx="353.14" cy="95.1" r="6" fill="#edf2f7" />
-    <circle cx="420.42" cy="187.06" r="6" fill="#edf2f7" />
-    <circle cx="420.42" cy="292.94" r="6" fill="#edf2f7" />
-    <circle cx="353.14" cy="384.9" r="6" fill="#edf2f7" />
-    <circle cx="240" cy="420" r="6" fill="#edf2f7" />
-    <circle cx="126.86" cy="384.9" r="6" fill="#edf2f7" />
-    <circle cx="59.58" cy="292.94" r="6" fill="#edf2f7" />
-    <circle cx="59.58" cy="187.06" r="6" fill="#edf2f7" />
-    <circle cx="126.86" cy="95.1" r="6" fill="#edf2f7" />
-
-    <!-- Все линии между всеми вершинами -->
-    <line x1="240" y1="60"    x2="353.14" y2="95.1" stroke="#edf2f7" stroke-width="2" />
-    <line x1="240" y1="60"    x2="420.42" y2="187.06" stroke="#edf2f7" stroke-width="2" />
-    <line x1="240" y1="60"    x2="420.42" y2="292.94" stroke="#edf2f7" stroke-width="2" />
-    <line x1="240" y1="60"    x2="353.14" y2="384.9" stroke="#edf2f7" stroke-width="2" />
-    <line x1="240" y1="60"    x2="240" y2="420" stroke="#edf2f7" stroke-width="2" />
-    <line x1="240" y1="60"    x2="126.86" y2="384.9" stroke="#edf2f7" stroke-width="2" />
-    <line x1="240" y1="60"    x2="59.58" y2="292.94" stroke="#edf2f7" stroke-width="2" />
-    <line x1="240" y1="60"    x2="59.58" y2="187.06" stroke="#edf2f7" stroke-width="2" />
-    <line x1="240" y1="60"    x2="126.86" y2="95.1" stroke="#edf2f7" stroke-width="2" />
-
-    <line x1="353.14" y1="95.1"   x2="420.42" y2="187.06" stroke="#edf2f7" stroke-width="2" />
-    <line x1="353.14" y1="95.1"   x2="420.42" y2="292.94" stroke="#edf2f7" stroke-width="2" />
-    <line x1="353.14" y1="95.1"   x2="353.14" y2="384.9" stroke="#edf2f7" stroke-width="2" />
-    <line x1="353.14" y1="95.1"   x2="240" y2="420" stroke="#edf2f7" stroke-width="2" />
-    <line x1="353.14" y1="95.1"   x2="126.86" y2="384.9" stroke="#edf2f7" stroke-width="2" />
-    <line x1="353.14" y1="95.1"   x2="59.58" y2="292.94" stroke="#edf2f7" stroke-width="2" />
-    <line x1="353.14" y1="95.1"   x2="59.58" y2="187.06" stroke="#edf2f7" stroke-width="2" />
-    <line x1="353.14" y1="95.1"   x2="126.86" y2="95.1" stroke="#edf2f7" stroke-width="2" />
-
-    <line x1="420.42" y1="187.06"   x2="420.42" y2="292.94" stroke="#edf2f7" stroke-width="2" />
-    <line x1="420.42" y1="187.06"   x2="353.14" y2="384.9" stroke="#edf2f7" stroke-width="2" />
-    <line x1="420.42" y1="187.06"   x2="240" y2="420" stroke="#edf2f7" stroke-width="2" />
-    <line x1="420.42" y1="187.06"   x2="126.86" y2="384.9" stroke="#edf2f7" stroke-width="2" />
-    <line x1="420.42" y1="187.06"   x2="59.58" y2="292.94" stroke="#edf2f7" stroke-width="2" />
-    <line x1="420.42" y1="187.06"   x2="59.58" y2="187.06" stroke="#edf2f7" stroke-width="2" />
-    <line x1="420.42" y1="187.06"   x2="126.86" y2="95.1" stroke="#edf2f7" stroke-width="2" />
-
-    <line x1="420.42" y1="292.94"  x2="353.14" y2="384.9" stroke="#edf2f7" stroke-width="2" />
-    <line x1="420.42" y1="292.94"  x2="240" y2="420" stroke="#edf2f7" stroke-width="2" />
-    <line x1="420.42" y1="292.94"  x2="126.86" y2="384.9" stroke="#edf2f7" stroke-width="2" />
-    <line x1="420.42" y1="292.94"  x2="59.58" y2="292.94" stroke="#edf2f7" stroke-width="2" />
-    <line x1="420.42" y1="292.94"  x2="59.58" y2="187.06" stroke="#edf2f7" stroke-width="2" />
-    <line x1="420.42" y1="292.94"  x2="126.86" y2="95.1" stroke="#edf2f7" stroke-width="2" />
-
-    <line x1="353.14" y1="384.9"  x2="240" y2="420" stroke="#edf2f7" stroke-width="2" />
-    <line x1="353.14" y1="384.9"  x2="126.86" y2="384.9" stroke="#edf2f7" stroke-width="2" />
-    <line x1="353.14" y1="384.9"  x2="59.58" y2="292.94" stroke="#edf2f7" stroke-width="2" />
-    <line x1="353.14" y1="384.9"  x2="59.58" y2="187.06" stroke="#edf2f7" stroke-width="2" />
-    <line x1="353.14" y1="384.9"  x2="126.86" y2="95.1" stroke="#edf2f7" stroke-width="2" />
-
-    <line x1="240" y1="420"    x2="126.86" y2="384.9" stroke="#edf2f7" stroke-width="2" />
-    <line x1="240" y1="420"    x2="59.58" y2="292.94" stroke="#edf2f7" stroke-width="2" />
-    <line x1="240" y1="420"    x2="59.58" y2="187.06" stroke="#edf2f7" stroke-width="2" />
-    <line x1="240" y1="420"    x2="126.86" y2="95.1" stroke="#edf2f7" stroke-width="2" />
-
-    <line x1="126.86" y1="384.9" x2="59.58" y2="292.94" stroke="#edf2f7" stroke-width="2" />
-    <line x1="126.86" y1="384.9" x2="59.58" y2="187.06" stroke="#edf2f7" stroke-width="2" />
-    <line x1="126.86" y1="384.9" x2="126.86" y2="95.1" stroke="#edf2f7" stroke-width="2" />
-
-    <line x1="59.58" y1="292.94" x2="59.58" y2="187.06" stroke="#edf2f7" stroke-width="2" />
-    <line x1="59.58" y1="292.94" x2="126.86" y2="95.1" stroke="#edf2f7" stroke-width="2" />
-
-    <line x1="59.58" y1="187.06" x2="126.86" y2="95.1" stroke="#edf2f7" stroke-width="2" />
+    <g transform="rotate(30 240 240)">
+        <!-- Фон -->
+        <rect width="100%" height="100%" fill="url(#bgGrad)" mask="url(#mask)" />
+    </g>
 </svg>
